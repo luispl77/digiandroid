@@ -15,3 +15,8 @@ After downloading the .zip file in your android phone, got to the ArduinoDroid a
 To get the examples, click Sketch->Library Examples->User Libraries->digiandroid->[example]
 
 To upload to the digispark, first you need to select the board, go to Settings->Board type->Digistump->Digispark (Default- 16.5mhz). To upload the code, first compile. After pluging the digispark to the phone you should see a "USB Device attached" toast message, and that is when you can to click upload (no drivers needed).
+
+
+# Notes
+
+Please let me know if any of the keyboard header files don't work. I only tested the PT-PT keyboard.
