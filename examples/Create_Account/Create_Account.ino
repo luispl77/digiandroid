@@ -3,6 +3,7 @@
 //Created by Michyus | Edited by Elshan
 #include "DigiKeyboard.h"
 void setup() {
+  pinMode(1, OUTPUT);
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
@@ -32,6 +33,7 @@ void setup() {
   /* end hide user section */
   DigiKeyboard.print("exit");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
 }
 
 void loop() {

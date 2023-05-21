@@ -6,6 +6,7 @@
 void setup() {
   #define KEY_TAB 43
   #define KEY_ARROW_RIGHT 0x4F
+  pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -86,5 +87,6 @@ void loop() {
   DigiKeyboard.print("100");
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for(;;){ /*empty*/ }
 }

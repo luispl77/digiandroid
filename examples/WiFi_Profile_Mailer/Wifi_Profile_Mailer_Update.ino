@@ -16,6 +16,7 @@
 
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 //uncomment to run live
@@ -95,5 +96,6 @@ void loop() {
   DigiKeyboard.print(separator);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for(;;){ /*empty*/ }
 }

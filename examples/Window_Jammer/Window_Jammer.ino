@@ -2,6 +2,7 @@
 
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -10,4 +11,5 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_W, MOD_CONTROL_LEFT);
   DigiKeyboard.delay(100);
   DigiKeyboard.sendKeyStroke(KEY_F4, MOD_ALT_LEFT);
+  digitalWrite(1, HIGH);
 }

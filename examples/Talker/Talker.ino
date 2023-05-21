@@ -1,6 +1,7 @@
 //This DigiSpark script opens up the powershell and makes your computer speak out a message.
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -29,6 +30,7 @@ void loop() {
   DigiKeyboard.delay(100);
   DigiKeyboard.sendKeyStroke(KEY_SPACE, MOD_ALT_LEFT);
   DigiKeyboard.sendKeyStroke(KEY_N);
+  digitalWrite(1, HIGH);
   for (;;) {
     /*empty*/
   }

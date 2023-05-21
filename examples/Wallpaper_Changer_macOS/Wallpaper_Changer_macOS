@@ -2,6 +2,7 @@
 // Tested on El Capitan (macOS 10.11.6)
 #include "DigiKeyboard.h"
 void setup() {
+pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -21,7 +22,7 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(200);
   DigiKeyboard.sendKeyStroke(KEY_Q, MOD_GUI_LEFT);
-
+  digitalWrite(1, HIGH);
   for (;;) {
     /*Stops the digispark from running the scipt again*/
   }

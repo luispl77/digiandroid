@@ -3,6 +3,7 @@
 
 #include "DigiKeyboard.h"
 void setup() {
+	pinMode(1, OUTPUT);
 }
 
 void loop() {
@@ -27,5 +28,6 @@ void loop() {
   DigiKeyboard.print(F("$wmplayer.Close();"));
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
   for(;;){ /*empty*/ }
 }
